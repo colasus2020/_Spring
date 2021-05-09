@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Definition for textEditor bean -->
+
+    <bean id="person" class="cola.springTest.demo02DependencyInjection.Person">
+        <property name="name" value="jack"/>
+        <property name="age" value="20"/>
+        <!--引用需要用ref -->
+        <property name="cat" ref="cat"/>
+
+    </bean>
+
+    <bean id="cat" class="cola.springTest.demo02DependencyInjection.Cat">
+    <property name="name" value="ketty" />
+    </bean>
+
+</beans>
